@@ -23,8 +23,6 @@ document.getElementById('enquiryForm').addEventListener('submit',e=>{
   e.preventDefault();
   const form=e.currentTarget, status=document.getElementById('formStatus');
   if(!form.checkValidity()){form.reportValidity();return;}
-  // This front-end demo deliberately does not transmit or store personal data.
-  status.textContent='Demo only: your details have not been sent or saved. Connect a secure server-side form endpoint before accepting real enquiries.';
-  status.scrollIntoView({behavior:'smooth',block:'nearest'});
+  window.location.href='https://forms.gle/hXJwg6kA5zxyamW47';
 });
 updateEmi();
