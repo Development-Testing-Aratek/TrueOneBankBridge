@@ -4,7 +4,8 @@ TRUE ONE BANK BRIDGE — LOCAL WEBSITE STARTER
 WHAT IS INCLUDED
 - index.html: responsive loan information website
 - styles.css: responsive design and visual styling
-- script.js: EMI calculator, mobile menu, and demo enquiry validation
+- script.js: EMI calculator and mobile menu
+- Google Forms enquiry form: embedded in index.html and completed directly on the page
 - assets/true-one-logo.jpeg: your supplied logo
 - privacy.html and terms.html: draft templates that must be reviewed/customised
 
@@ -13,15 +14,9 @@ RUN LOCALLY (Windows)
    C:\Websites\true_one_bank_bridge
 2. Open the folder and double-click index.html.
 3. Edit index.html with VS Code or Notepad. Edit styles.css for design and
-   script.js for calculator/form behaviour.
+   script.js for calculator/mobile-menu behaviour. The enquiry form is embedded
+   from Google Forms in index.html.
 4. Refresh the browser to view changes.
-
-OPTIONAL LOCAL HTTP SERVER
-Install Python 3, open PowerShell in this folder and run:
-   py -m http.server 8000
-Then browse to:
-   http://localhost:8000
-Stop it with Ctrl+C. This is a local preview server, not public hosting.
 
 PUBLISH STATIC SITE (example: Cloudflare Pages + GitHub)
 1. Create a GitHub repository and upload index.html, styles.css, script.js,
@@ -38,17 +33,20 @@ PUBLISH STATIC SITE (example: Cloudflare Pages + GitHub)
 6. If changing nameservers at GoDaddy, preserve/recreate existing MX, TXT,
    and other DNS records needed for email and verification. Wait for DNS and
    HTTPS setup to finish.
-7. Test the domain on mobile and desktop, links, calculator, and privacy/terms.
+7. Test the domain on mobile and desktop, links, calculator, embedded Google
+   Form, and privacy/terms.
 
 IMPORTANT PRODUCTION SECURITY CHECKLIST
-- The enquiry form is intentionally DEMO ONLY. It does not send or save anything.
-  Do not advertise it as a working enquiry form until you connect a backend.
-- Never put API keys, database passwords, SMTP credentials, or private keys in
-  HTML/JS. Browser code is public.
-- For real enquiries, use HTTPS and a server-side endpoint with validation,
-  rate limiting, spam protection, CSRF protection where appropriate, restricted
-  access, secure storage, retention/deletion policy, backups and monitoring.
-- Do not store enquiries in a public GitHub repository or in client-side code.
+- The enquiry form is embedded from Google Forms. Visitors complete it directly
+   on the page; responses are handled by Google Forms, not stored by this website.
+- The form URL is set in index.html. To replace it, update the iframe src with
+   the form's Google Forms embed URL. Manage questions, response collection and
+   access in Google Forms.
+- Ensure the Google Form is published and accepts responses. Review its response
+   destination and access permissions, and update the privacy notice to describe
+   the information collected and Google's role in processing submissions.
+- Never request passwords, OTPs, card details or sensitive identity numbers in
+   the enquiry form.
 - Use a privacy notice and consent flow that accurately reflect actual practices.
 - Use a verified business email, phone, legal entity/address, and accurate
   lender/partner disclosures. Remove placeholder contact details.
@@ -56,8 +54,6 @@ IMPORTANT PRODUCTION SECURITY CHECKLIST
   and legally authorised. Confirm all applicable Indian financial/regulatory
   requirements with qualified counsel/compliance professionals.
 - EMI estimates are illustrative; validate calculator results before business use.
-- Logo file is the supplied image as-is. Replace with an approved transparent
-  PNG/SVG if you have a higher-resolution official logo.
 
 Useful official docs:
 Cloudflare Pages: https://developers.cloudflare.com/pages/

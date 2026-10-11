@@ -14,15 +14,8 @@ function updateEmi(){
 }
 [amount,rate,tenure].forEach(el=>el.addEventListener('input',updateEmi));
 document.getElementById('resetCalc').addEventListener('click',()=>{amount.value=1000000;rate.value=10.5;tenure.value=5;updateEmi();});
-document.querySelectorAll('[data-loan]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('loanType').value=link.dataset.loan;}));
 const menuToggle=document.getElementById('menuToggle'), nav=document.getElementById('mainNav');
 menuToggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');}));
 document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('enquiryForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const form=e.currentTarget, status=document.getElementById('formStatus');
-  if(!form.checkValidity()){form.reportValidity();return;}
-  window.location.href='https://forms.gle/hXJwg6kA5zxyamW47';
-});
 updateEmi();
