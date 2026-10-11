@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b3f">
+  <meta name="description" content="Explore personal loans, home loans and plan your monthly EMI with True One Bank Bridge. Submit an enquiry to request a callback.">
+  <title>True One Bank Bridge | Personal & Home Loans</title>
+  <link rel="icon" href="assets/true-one-logo.jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar"><div class="container topbar-inner"><span>Loan guidance made simpler</span><span>Transparent guidance · Personalised support</span></div></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="True One Bank Bridge home">
+        <img src="assets/true-one-logo.jpeg" alt="True One logo">
+        <span><strong>TRUE ONE</strong><small>BANK BRIDGE</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav" aria-label="Main navigation">
+        <a href="#loans">Loan solutions</a><a href="#calculator">EMI calculator</a><a href="#process">How it works</a><a href="#faq">FAQs</a>
+        <a class="nav-cta" href="#enquiry">Request a callback <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR GOALS. A CLEARER PATH.</div>
+          <h1>Move forward with<br><span>confidence.</span></h1>
+          <p class="hero-lead">Thoughtful loan guidance for the milestones that matter—from your next big plan to a place to call home.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#enquiry">Explore your options <span>→</span></a><a class="text-link" href="#calculator">Calculate your EMI <span>↘</span></a></div>
+          <div class="trust-row"><div class="trust-icon">✓</div><div><strong>Clarity at every step</strong><small>Understand estimates before you enquire</small></div><div class="trust-divider"></div><div class="trust-icon shield">◇</div><div><strong>Privacy-conscious</strong><small>Your details should be handled securely</small></div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-card card-back"><div class="mini-label">PLAN WITH PURPOSE</div><div class="mini-line"></div><div class="mini-line short"></div><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="visual-card main-visual"><div class="visual-top"><span class="visual-tag">YOUR NEXT CHAPTER</span><span class="sparkle">✦</span></div><div class="house-art"><div class="sun"></div><div class="roof"></div><div class="house"><div class="window"></div><div class="door"></div></div><div class="hill hill-a"></div><div class="hill hill-b"></div></div><div class="visual-bottom"><div><small>BIG DREAMS, SMART PLANNING</small><strong>Start with a plan.</strong></div><div class="round-arrow">↗</div></div></div>
+          <div class="floating-note"><span class="note-icon">₹</span><div><small>Know your numbers</small><strong>Estimate your EMI</strong></div><a href="#calculator">→</a></div>
+          <div class="decor-dot dot-a"></div><div class="decor-dot dot-b"></div>
+        </div>
+      </div>
+      <div class="container hero-foot"><span>PERSONAL LOANS</span><i></i><span>HOME LOANS</span><i></i><span>EMI PLANNING</span></div>
+    </section>
+
+    <section class="section loans-section" id="loans">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">LOAN SOLUTIONS</div><h2>Make room for <span>what matters.</span></h2></div><p>Every financial goal is different. Explore a starting point and enquire to discuss your situation.</p></div>
+        <div class="loan-grid">
+          <article class="loan-card personal"><div class="loan-card-top"><div class="loan-icon">↗</div><span class="card-index">01 / PERSONAL</span></div><h3>Personal loan</h3><p>For planned expenses, unexpected needs, or the next step you’re ready to take.</p><ul><li>Flexible use of funds, subject to lender terms</li><li>Repayment options depend on eligibility</li><li>Compare estimated monthly payments</li></ul><a href="#enquiry" class="card-link" data-loan="Personal Loan">Enquire about personal loans <span>→</span></a></article>
+          <article class="loan-card home"><div class="loan-card-top"><div class="loan-icon">⌂</div><span class="card-index">02 / HOME</span></div><h3>Home loan</h3><p>Plan your home purchase with a clearer view of possible repayments.</p><ul><li>Explore home-financing options</li><li>Estimate EMI across different tenures</li><li>Understand that rates vary by lender</li></ul><a href="#enquiry" class="card-link" data-loan="Home Loan">Enquire about home loans <span>→</span></a></article>
+        </div>
+        <p class="section-note"><span>ⓘ</span> Loan approval, interest rates, fees and terms are determined by the relevant lender and depend on eligibility. True One Bank Bridge does not promise approval.</p>
+      </div>
+    </section>
+
+    <section class="calculator-section" id="calculator">
+      <div class="container calc-grid">
+        <div class="calc-copy"><div class="eyebrow light-eyebrow">EMI CALCULATOR</div><h2>Plan the monthly.<br><span>Picture the bigger.</span></h2><p>Adjust the amount, interest rate and tenure to estimate your monthly instalment. Use this as a planning tool—not a loan offer.</p><div class="calc-benefit"><span>✓</span> Instant estimates as you adjust</div><div class="calc-benefit"><span>✓</span> See principal and interest separately</div><div class="calc-benefit"><span>✓</span> Compare different scenarios</div></div>
+        <div class="calculator">
+          <div class="calc-header"><div><span class="calc-kicker">YOUR ESTIMATE</span><h3>EMI planner</h3></div><button class="reset-btn" id="resetCalc" type="button">Reset ↺</button></div>
+          <div class="field-block"><div class="field-label"><label for="amount">Loan amount</label><strong id="amountLabel">₹ 10,00,000</strong></div><input id="amount" type="range" min="50000" max="5000000" step="10000" value="1000000"><div class="range-ends"><span>₹50,000</span><span>₹50,00,000</span></div></div>
+          <div class="field-row"><div class="field-block"><label for="rate">Interest rate (% p.a.)</label><div class="number-input"><input id="rate" type="number" min="0" max="36" step="0.1" value="10.5"><span>%</span></div></div><div class="field-block"><label for="tenure">Tenure</label><div class="number-input"><input id="tenure" type="number" min="1" max="30" step="1" value="5"><span>years</span></div></div></div>
+          <div class="result-panel"><div class="result-label">ESTIMATED MONTHLY EMI</div><div class="emi-value" id="emiValue">₹ 21,494</div><div class="result-divider"></div><div class="result-details"><div><span>Principal amount</span><strong id="principalValue">₹ 10,00,000</strong></div><div><span>Estimated interest</span><strong id="interestValue">₹ 2,89,640</strong></div><div><span>Total repayment</span><strong id="totalValue">₹ 12,89,640</strong></div></div></div>
+          <a class="button button-primary calc-cta" href="#enquiry">Discuss this estimate <span>→</span></a>
+          <p class="calc-disclaimer">Illustrative calculation using a reducing-balance EMI formula. Actual lender calculations, fees, insurance, rate changes and repayment schedules may differ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section section" id="process"><div class="container"><div class="section-heading centered"><div><div class="eyebrow">A SIMPLE START</div><h2>From question to <span>next step.</span></h2></div><p>Start with an enquiry. Review the available options and make decisions with clear information.</p></div><div class="steps"><article><div class="step-number">01</div><h3>Tell us your goal</h3><p>Share the type of loan and a convenient way to contact you.</p></article><article><div class="step-number">02</div><h3>Discuss your options</h3><p>Review potential options, indicative costs and lender requirements.</p></article><article><div class="step-number">03</div><h3>Choose your next step</h3><p>Decide whether to proceed with the relevant lender after reviewing its terms.</p></article></div></div></section>
+
+    <section class="enquiry-section" id="enquiry"><div class="container enquiry-grid"><div class="enquiry-copy"><div class="eyebrow light-eyebrow">LET'S TALK</div><h2>Your plans deserve<br><span>a conversation.</span></h2><p>Leave your details and preferred contact time. Our team can follow up once this form is connected to a secure enquiry system.</p><div class="contact-promise"><div class="promise-icon">✦</div><div><strong>Only share what is needed</strong><small>Do not submit passwords, OTPs, bank credentials, Aadhaar numbers or other sensitive identity data through this form.</small></div></div><div class="contact-line"><span>✉</span><div><small>EMAIL</small><strong>Set your official contact email</strong></div></div><div class="contact-line"><span>◷</span><div><small>AVAILABILITY</small><strong>By appointment / callback</strong></div></div></div>
+      <form class="enquiry-form" id="enquiryForm" novalidate><div class="form-heading"><h3>Request a callback</h3><p>Fields marked * are required.</p></div><div class="form-row"><div class="form-field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" required maxlength="80" placeholder="Enter your name"></div><div class="form-field"><label for="phone">Mobile number *</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="16" placeholder="+91 98765 43210"></div></div><div class="form-row"><div class="form-field"><label for="loanType">Interested in *</label><select id="loanType" name="loanType" required><option value="">Choose loan type</option><option>Personal Loan</option><option>Home Loan</option><option>Both / Not sure</option></select></div><div class="form-field"><label for="loanAmount">Approximate amount</label><select id="loanAmount" name="loanAmount"><option value="">Select range (optional)</option><option>Below ₹5 lakh</option><option>₹5–10 lakh</option><option>₹10–25 lakh</option><option>₹25–50 lakh</option><option>Above ₹50 lakh</option><option>Not decided</option></select></div></div><div class="form-row"><div class="form-field"><label for="city">City *</label><input id="city" name="city" autocomplete="address-level2" required maxlength="80" placeholder="Your city"></div><div class="form-field"><label for="contactTime">Preferred callback</label><select id="contactTime" name="contactTime"><option value="">Any convenient time</option><option>Morning (9 AM–12 PM)</option><option>Afternoon (12 PM–4 PM)</option><option>Evening (4 PM–7 PM)</option></select></div></div><div class="form-field"><label for="message">Anything else? <span class="optional">(optional)</span></label><textarea id="message" name="message" rows="3" maxlength="500" placeholder="Tell us briefly what you need"></textarea></div><label class="consent"><input type="checkbox" id="consent" required><span>I consent to being contacted about this enquiry and have read the privacy notice. *</span></label><button class="button button-primary submit-btn" type="submit">Submit enquiry <span>→</span></button><p class="form-security"><span>▣</span> Demo form: submissions are not sent or stored. Connect a secure backend before publishing this form for real enquiries.</p><div class="form-status" id="formStatus" role="status" aria-live="polite"></div></form>
+    </div></section>
+
+    <section class="faq-section section" id="faq"><div class="container faq-grid"><div><div class="eyebrow">GOOD TO KNOW</div><h2>Questions, <span>answered.</span></h2><p class="faq-intro">A little clarity before you take the next step.</p></div><div class="faq-list"><details><summary>Is the EMI amount guaranteed by a lender?<span>+</span></summary><p>No. This calculator gives an estimate. A lender's final EMI depends on the approved amount, rate, tenure, fees and repayment terms.</p></details><details><summary>Does submitting an enquiry mean my loan is approved?<span>+</span></summary><p>No. An enquiry is only a request for contact. Approval is decided by the lender after its own checks.</p></details><details><summary>What information should I share here?<span>+</span></summary><p>Share only the basic contact details requested. Never submit an OTP, password, card PIN, net-banking credentials or sensitive identity documents in this demo form.</p></details><details><summary>Are there any fees or charges?<span>+</span></summary><p>Fees and charges vary by lender and product. Review the lender's official schedule of charges and loan documents before agreeing.</p></details></div></div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-main"><a class="brand footer-brand" href="#home"><img src="assets/true-one-logo.jpeg" alt=""><span><strong>TRUE ONE</strong><small>BANK BRIDGE</small></span></a><p>Clearer conversations for your financial goals.</p><a href="#enquiry" class="footer-link">Start an enquiry ↗</a></div><div class="footer-disclaimer">True One Bank Bridge is presented as a loan enquiry and guidance website. Unless separately authorised and accurately disclosed, it should not be represented as a bank, lender, RBI-regulated entity, or loan approver. Add verified business details, lender/partner disclosures, privacy policy, terms, grievance contact and applicable regulatory disclosures before production launch. Do not publish placeholder contact information.</div><div class="footer-bottom"><span>© <span id="year"></span> True One Bank Bridge. All rights reserved.</span><div><a href="privacy.html">Privacy notice</a><a href="terms.html">Terms of use</a></div></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
